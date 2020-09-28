@@ -1,0 +1,16 @@
+{
+  "name": "flipper",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "redspot": "0.2.6"
+  },
+  "scripts": {
+    "build": "redspot build",
+    "migrate": "redspot migrate",
+    "test": "redspot test"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.13"
+  }
+}

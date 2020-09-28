@@ -1,0 +1,100 @@
+{
+  "metadataVersion": "0.1.0",
+  "source": {
+    "hash": "0x8cbb850d53fd4ea30f721cb177094c15dade47a323d6ab86e30616513948d4ac",
+    "language": "ink! 2.1.0",
+    "compiler": "rustc 1.48.0-nightly"
+  },
+  "contract": {
+    "name": "flipper",
+    "version": "2.1.0",
+    "authors": [
+      "Parity Technologies <admin@parity.io>"
+    ]
+  },
+  "spec": {
+    "constructors": [
+      {
+        "args": [
+          {
+            "name": "init_value",
+            "type": {
+              "displayName": [
+                "bool"
+              ],
+              "id": 1
+            }
+          }
+        ],
+        "docs": [
+          "Constructor that initializes the `bool` value to the given `init_value`."
+        ],
+        "name": "new",
+        "selector": "0x41e691fc"
+      },
+      {
+        "args": [],
+        "docs": [
+          "Constructor that initializes the `bool` value to `false`.",
+          "",
+          "Constructors can delegate to other constructors."
+        ],
+        "name": "default",
+        "selector": "0xcfee7c08"
+      }
+    ],
+    "docs": [],
+    "events": [],
+    "messages": [
+      {
+        "args": [],
+        "docs": [
+          "A message that can be called on instantiated contracts.",
+          "This one flips the value of the stored `bool` from `true`",
+          "to `false` and vice versa."
+        ],
+        "mutates": true,
+        "name": "flip",
+        "returnType": null,
+        "selector": "0xd96ef951"
+      },
+      {
+        "args": [],
+        "docs": [
+          "Simply returns the current value of our `bool`."
+        ],
+        "mutates": false,
+        "name": "get",
+        "returnType": {
+          "displayName": [
+            "bool"
+          ],
+          "id": 1
+        },
+        "selector": "0x6817c00f"
+      }
+    ]
+  },
+  "storage": {
+    "Struct": {
+      "fields": [
+        {
+          "layout": {
+            "Cell": {
+              "key": "0x0000000000000000000000000000000000000000000000000000000000000000",
+              "ty": 1
+            }
+          },
+          "name": "value"
+        }
+      ]
+    }
+  },
+  "types": [
+    {
+      "def": {
+        "primitive": "bool"
+      }
+    }
+  ]
+}
